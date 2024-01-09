@@ -14,37 +14,38 @@
       "MessageSize": 64
     },
     "HardwareIds": ["^VID_2E8A&PID_000A"],
-    "Info": {
-      "CanInstallFirmware": true,
-      "CanResetBoard": true,
-      "FirmwareBaseName": "mobiflight_gnc255_raspberrypico",
-      "FirmwareExtension": "uf2",
-      "FriendlyName": "MobiFlight GNC255 Pico",
-      "LatestFirmwareVersion": "2.5.0",
-      "MobiFlightType": "MobiFlight GNC255 Pico",
-      "ResetFirmwareFile": "reset.raspberry_pico_flash_nuke.uf2",
-      "CustomDeviceTypes": [
-        "MOBIFLIGHT_GNC255"
-      ],
-      "Community": {
-        "Project": "Mobiflight GNC255",
-        "Website": "https://github.com/MobiFlight/MobiFlight-CustomDevices/tree/main/Mobiflight/GNC255",
-        "Docs": "https://github.com/MobiFlight/MobiFlight-Connector/wiki",
-        "Support": "https://mobiflight.com/discord"
-      }
-    },
+  "Info": {
+    "CanInstallFirmware": true,
+    "CanResetBoard": true,
+    "FirmwareBaseName": "mobiflight_gnc255_raspberrypico",
+    "FirmwareExtension": "uf2",
+    "FriendlyName": "MobiFlight GNC255 Pico",
+    "LatestFirmwareVersion": "2.5.0",
+    "MobiFlightType": "MobiFlight GNC255 Pico",
+    "MobiFlightTypeLabel": "MobiFlight GNC255 Pico",
+    "ResetFirmwareFile": "reset.raspberry_pico_flash_nuke.uf2",
+    "CustomDeviceTypes": [
+      "MOBIFLIGHT_GNC255"
+    ],
+    "Community": {
+      "Project": "Mobiflight GNC255",
+      "Website": "https://github.com/MobiFlight/MobiFlight-CustomDevices/tree/main/Mobiflight/GNC255",
+      "Docs": "https://github.com/MobiFlight/MobiFlight-Connector/wiki",
+      "Support": "https://mobiflight.com/discord"
+    }
+  },
     "ModuleLimits": {
       "MaxAnalogInputs": 3,
-      "MaxInputShifters": 6,
+      "MaxInputShifters": 4,
       "MaxButtons": 26,
-      "MaxEncoders": 13,
+      "MaxEncoders": 8,
       "MaxLcdI2C": 2,
-      "MaxLedSegments": 6,
+      "MaxLedSegments": 4,
       "MaxOutputs": 26,
       "MaxServos": 8,
-      "MaxShifters": 6,
+      "MaxShifters": 4,
       "MaxSteppers": 6,
-      "MaxInputMultiplexer": 6,
+      "MaxInputMultiplexer": 4,
       "MaxCustomDevices": 5
     },
     "Pins": [

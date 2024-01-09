@@ -5,5 +5,5 @@
 .vscode/ipch
 .vscode/arduino.json
 src
-CustomDevices/**/Community/firmware
+/**/Community/firmware
 zip_files

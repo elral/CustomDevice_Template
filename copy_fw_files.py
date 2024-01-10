@@ -47,5 +47,4 @@ def createZIP(original_folder_path, zip_file_path, new_folder_name):
 env.AddPostAction("$BUILD_DIR/${PROGNAME}.hex", copy_fw_files)
 env.AddPostAction("$BUILD_DIR/${PROGNAME}.bin", copy_fw_files)
 # Single action/command per 1 target
-env.AddPostAction("checkprogsize", createCommunityZipFile)
-#env.AddCustomTarget("create_community_zip", None, createCommunityZipFile)
+env.AddCustomTarget("create_community_zip", None, createCommunityZipFile)

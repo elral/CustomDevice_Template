@@ -27,6 +27,7 @@ def copy_fw_files (source, target, env):
 
     shutil.copy(fw_file_name, custom_device_folder + "/Community/firmware")
 
+def createCommunityZipFile(source, target, env):
     original_folder_path = custom_device_folder + "/Community"
     zip_file_path = './zip_files/' + community_project + '_' + firmware_version + '.zip'
     new_folder_in_zip = community_project
@@ -47,3 +48,4 @@ def createZIP(original_folder_path, zip_file_path, new_folder_name):
 
 env.AddPostAction("$BUILD_DIR/${PROGNAME}.hex", copy_fw_files)
 env.AddPostAction("$BUILD_DIR/${PROGNAME}.bin", copy_fw_files)
+env.AddPostAction("checkprogsize", createCommunityZipFile)

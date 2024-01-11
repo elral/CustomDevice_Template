@@ -62,7 +62,6 @@ Within `MFCustomDevice.cpp` is an example, how to read this information from the
 ### All .json files
 Copy the complete `/Community` folder into the `/Community` folder which is in your Mobiflight installation folder.
 
-![image](https://github.com/MobiFlight/MobiFlight-Connector/assets/3263285/3d4446dc-e774-4c0c-bda4-7320ec66d242)
 
 ### Testing
 Now it's a good point to test everything you have set up.
@@ -91,10 +90,7 @@ See all hints in the files. It is also a good idea to check how the examples are
 ### Special message
 There are some special messages with their respective IDs defined:
 * Stop message (`-1`) - The device should turn off on receiving this message. The message is sent by the Connector any time the MobiFlight execution stops (Stop-button) or the application is shutdown.
-# PowerSavingMode message (`-2`) - The device should go into a power saving mode (value=1) or wake up from it again (value=0).
+* PowerSavingMode message (`-2`) - The device should go into a power saving mode (value=1) or wake up from it again (value=0).
 
 ### Overview how the json files are related
 ![image](https://github.com/MobiFlight/MobiFlight-Connector/assets/3263285/0123829b-27c1-49ad-96d2-30a751da6e25)
-
-### Firmware version
-See the [additional hints](https://github.com/MobiFlight/MobiFlight-Connector/wiki/Adding-a-custom-board-to-MobiFlight#step-2-setting-the-firmware-version) for setting up the firmware version.

@@ -5,6 +5,5 @@
 .vscode/ipch
 .vscode/arduino.json
 src
-/**/Community/firmware/*
-!/**/Community/firmware/reset*
+_build
 zip_files

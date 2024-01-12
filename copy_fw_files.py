@@ -19,17 +19,19 @@ custom_device_folder = env.GetProjectOption('custom_device_folder', "")
 def copy_fw_files (source, target, env):
     fw_file_name=str(target[0])
 
-    if os.path.exists(custom_device_folder + "/Community/firmware") == False:
-        os.makedirs(custom_device_folder + "/Community/firmware")
+    if os.path.exists("./_build/" + custom_device_folder) == False:
+        os.makedirs("./_build/" + custom_device_folder + "/Community/firmware")
+        shutil.copytree(custom_device_folder + "/Community", "./_build/" + custom_device_folder + "/Community", dirs_exist_ok=True)
+        print("Creating Folder and copying community folder")
     
     if fw_file_name[-3:] == "bin":
         fw_file_name=fw_file_name[0:-3] + "uf2"
 
-    shutil.copy(fw_file_name, custom_device_folder + "/Community/firmware")
+    shutil.copy(fw_file_name, "./_build/" + custom_device_folder + "/Community/firmware")
     createCommunityZipFile(source, target, env)
 
 def createCommunityZipFile(source, target, env):
-    original_folder_path = custom_device_folder + "/Community"
+    original_folder_path = "./_build/" + custom_device_folder + "/Community"
     zip_file_path = './zip_files/' + community_project + '_' + firmware_version + '.zip'
     new_folder_in_zip = community_project
     createZIP(original_folder_path, zip_file_path, new_folder_in_zip)

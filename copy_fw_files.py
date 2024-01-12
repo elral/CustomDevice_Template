@@ -32,13 +32,13 @@ def copy_fw_files (source, target, env):
 
 def createCommunityZipFile(source, target, env):
     original_folder_path = "./_build/" + custom_device_folder + "/Community"
-    zip_file_path = './zip_files/' + community_project + '_' + firmware_version + '.zip'
+    zip_file_path = './_dist/' + community_project + '_' + firmware_version + '.zip'
     new_folder_in_zip = community_project
     createZIP(original_folder_path, zip_file_path, new_folder_in_zip)
 
 def createZIP(original_folder_path, zip_file_path, new_folder_name):
-    if os.path.exists("./zip_files") == False:
-        os.mkdir("./zip_files")
+    if os.path.exists("./_dist") == False:
+        os.mkdir("./_dist")
     with zipfile.ZipFile(zip_file_path, 'w') as zipf:
         for root, dirs, files in os.walk(original_folder_path):
             for file in files:

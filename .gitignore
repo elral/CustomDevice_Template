@@ -6,4 +6,4 @@
 .vscode/arduino.json
 src
 _build
-zip_files
+_dist

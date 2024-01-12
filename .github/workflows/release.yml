@@ -51,11 +51,11 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ZIP files
-          path: ./zip_files/*.zip
+          path: ./_dist/*.zip
 
       - name: Release
         uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          files: ./zip_files/*.zip
+          files: ./_dist/*.zip

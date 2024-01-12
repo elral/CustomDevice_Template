@@ -47,4 +47,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ZIP files
-          path: ./zip_files/*.zip
+          path: ./_dist/*.zip

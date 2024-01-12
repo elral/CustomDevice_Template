@@ -94,3 +94,4 @@ There are some special messages with their respective IDs defined:
 
 ### Overview how the json files are related
 ![image](https://github.com/MobiFlight/MobiFlight-Connector/assets/3263285/0123829b-27c1-49ad-96d2-30a751da6e25)
+

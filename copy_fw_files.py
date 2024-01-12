@@ -26,6 +26,10 @@ def copy_fw_files (source, target, env):
         fw_file_name=fw_file_name[0:-3] + "uf2"
 
     shutil.copy(fw_file_name, custom_device_folder + "/Community/firmware")
+    try:
+        shutil.copytree(custom_device_folder + "/_resetFiles", custom_device_folder + "/Community/firmware", dirs_exist_ok=True)
+    except:
+        pass
     createCommunityZipFile("","","")
 
 def createCommunityZipFile(source, target, env):
